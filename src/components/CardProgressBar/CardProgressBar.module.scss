@@ -1,0 +1,23 @@
+@use 'src/styles/utils/mixins' as *;
+
+.card-progress-bar {
+  height: 4px;
+  display: flex;
+
+  &__progress,
+  &__remainder {
+    backdrop-filter: blur(1px);
+
+    box-shadow: 0px 1px 2px 0px #00000026, 0px 2px 1px 0px #ffffff40 inset,
+      0px -2px 1px 0px #00000026 inset;
+  }
+
+  &__progress {
+    background: linear-gradient(270deg, #d5ba94 0%, #b98756 50%, #534434 100%);
+  }
+
+  &__remainder {
+    flex-grow: 1;
+    background-color: var(--gray);
+  }
+}

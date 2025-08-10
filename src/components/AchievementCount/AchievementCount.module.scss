@@ -1,0 +1,60 @@
+@use 'src/styles/utils/vars' as *;
+@use 'src/styles/utils/mixins' as *;
+
+.achievements-count {
+  padding: $padding-l;
+  backdrop-filter: blur(30px);
+
+  border-radius: $border-radius-m;
+  border: $border-s solid var(--border-gray-50);
+
+  background: linear-gradient(
+    294.25deg,
+    rgba(185, 135, 86, 0.27) 1.06%,
+    rgba(83, 61, 39, 0) 80.88%
+  );
+
+  background-repeat: no-repeat;
+  background-size: 100px 100%;
+  background-position: right center;
+
+  gap: $gap-l;
+  display: flex;
+  flex-direction: column;
+
+  &__top {
+    display: grid;
+    column-gap: $gap-m;
+    grid-template-columns: auto 1fr auto;
+
+    align-items: center;
+
+    @include on-desktop {
+      column-gap: $gap-s;
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    aspect-ratio: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title {
+    color: var(--gray-lite);
+    @include regular-14-uppercase;
+  }
+
+  &__opened {
+    color: var(--white);
+    @include regular-14-uppercase;
+  }
+
+  &__total {
+    color: var(--gray-lite);
+    @include regular-14-uppercase;
+  }
+}

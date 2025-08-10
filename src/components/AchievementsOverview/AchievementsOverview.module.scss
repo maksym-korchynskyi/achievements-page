@@ -1,0 +1,60 @@
+@use 'src/styles/utils/vars' as *;
+@use 'src/styles/utils/mixins' as *;
+
+.achievements-overview {
+  gap: $overview-gap;
+  display: flex;
+  flex-direction: column;
+
+  border-width: 1px;
+  border-radius: $border-radius-xl;
+
+  padding: $padding-l;
+
+  background: var(--gray-blur);
+  border: $border-m solid var(--border-gray-50);
+
+  position: relative;
+
+  &::after {
+    content: '';
+    z-index: -1;
+
+    border-width: 1px;
+    border-radius: $border-radius-xl;
+
+    inset: 0;
+    position: absolute;
+
+    transform: rotate(-180deg);
+    backdrop-filter: blur(27px);
+
+    background: linear-gradient(
+      294.25deg,
+      rgba(185, 135, 86, 0.27) 1.06%,
+      rgba(83, 61, 39, 0) 80.88%
+    );
+  }
+
+  @include on-tablet {
+    gap: $overview-gap-tablet;
+  }
+
+  &__top {
+    gap: $gap-m;
+    display: flex;
+    flex-direction: column;
+
+    @include on-desktop {
+      gap: $gap-l;
+    }
+  }
+
+  &__title {
+    @include museo-cyrl;
+  }
+
+  &__motivation {
+    @include regular-18;
+  }
+}

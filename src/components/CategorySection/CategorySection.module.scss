@@ -1,0 +1,40 @@
+@use 'src/styles/utils/vars' as *;
+@use 'src/styles/utils/mixins' as *;
+
+.category-section {
+  border-radius: $border-radius-xl;
+  border: $border-m solid var(--border-gray-50);
+
+  padding-inline: $padding-xl;
+  padding-block: $padding-xxl $padding-xl;
+
+  background: var(--gray-blur);
+
+  gap: $gap-l;
+  display: flex;
+  flex-direction: column;
+
+  @include on-desktop {
+    gap: $gap-xxl;
+  }
+
+  &__title {
+    gap: $gap-m;
+    display: flex;
+
+    @include regular-36;
+
+    @include on-desktop {
+      gap: $gap-l;
+    }
+  }
+
+  &__count {
+    color: var(--gray-lite);
+    @include regular-16;
+
+    @include on-desktop {
+      @include regular-20;
+    }
+  }
+}

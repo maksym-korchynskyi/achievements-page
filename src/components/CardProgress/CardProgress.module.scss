@@ -1,0 +1,30 @@
+@use 'src/styles/utils/vars' as *;
+@use 'src/styles/utils/mixins' as *;
+
+.card-progress {
+  gap: $gap-m;
+  display: flex;
+  flex-direction: column;
+
+  &__top {
+    gap: $gap-s;
+    display: flex;
+  }
+
+  &__title {
+    flex-grow: 1;
+    color: var(--gray-lite);
+
+    @include regular-14;
+  }
+
+  &__progress {
+    color: var(--white);
+    @include regular-14-uppercase;
+  }
+
+  &__target {
+    color: var(--gray-lite);
+    @include regular-14-uppercase;
+  }
+}

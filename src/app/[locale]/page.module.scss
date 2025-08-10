@@ -1,0 +1,10 @@
+@use '@styles/utils/_vars' as *;
+
+.achievements-page {
+  display: flex;
+  flex-direction: column;
+
+  gap: $gap-m;
+
+  backdrop-filter: blur(27px);
+}

@@ -1,0 +1,36 @@
+@use 'src/styles/utils/vars' as *;
+@use 'src/styles/utils/mixins.scss' as *;
+
+$min-width: 180px;
+
+.category-selector {
+  padding: $padding-s;
+  background: var(--gray-blur);
+
+  border-radius: $border-radius-l;
+  border: $border-m solid var(--gray-dark-60);
+
+  gap: $gap-m;
+  display: grid;
+  overflow-x: auto;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(180, 1fr);
+
+  scrollbar-width: none; // Firefox
+  -ms-overflow-style: none; // IE / Edge
+
+  &::-webkit-scrollbar {
+    display: none; // Chrome / Safari / Opera
+  }
+
+  &__category-card {
+    gap: $gap-m;
+    display: flex;
+  }
+
+  &__divider {
+    width: 1px;
+    margin-block: $margin;
+    background-color: var(--white);
+  }
+}

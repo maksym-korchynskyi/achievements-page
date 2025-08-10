@@ -1,0 +1,90 @@
+@use 'src/styles/utils/vars' as *;
+@use 'src/styles/utils/mixins' as *;
+
+.achievement-card {
+  height: 100%;
+  user-select: none;
+  width: $card-width;
+  box-sizing: border-box;
+
+  gap: $gap-l;
+  display: flex;
+  flex-direction: column;
+
+  padding: $padding-l;
+  border-radius: $border-radius-l;
+  border: $border-s solid var(--border-gray-50);
+
+  backdrop-filter: blur(30px);
+  background: linear-gradient(
+    180deg,
+    rgba(40, 40, 40, 0.6) 0%,
+    rgba(12, 11, 11, 0.6) 100%
+  );
+
+  &--rank-0 {
+    background: linear-gradient(
+      180deg,
+      rgba(94, 94, 94, 0.6) 0%,
+      rgba(58, 58, 58, 0.6) 100%
+    );
+  }
+
+  &--rank-1 {
+    border: $border-s solid var(--gold-lite);
+
+    background: linear-gradient(
+      360deg,
+      rgba(105, 83, 63, 0.6) 0%,
+      rgba(180, 149, 122, 0.6) 100%
+    );
+  }
+
+  &__top {
+    flex-grow: 1;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__info-icon {
+    top: 0;
+    right: 0;
+    position: absolute;
+
+    width: 24px;
+    aspect-ratio: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__divider {
+    width: 100%;
+    height: 0.5px;
+    background-color: var(--white);
+  }
+
+  &__details {
+    gap: $gap-m;
+    display: flex;
+    flex-direction: column;
+
+    &--completed {
+      gap: $gap-s;
+    }
+  }
+
+  &__title {
+    color: var(--gold-lite);
+    @include regular-14;
+  }
+
+  &__description {
+    color: var(--gray-lite);
+    @include regular-14;
+  }
+}

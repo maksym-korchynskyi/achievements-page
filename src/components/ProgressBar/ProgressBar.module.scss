@@ -1,0 +1,30 @@
+@use 'src/styles/utils/vars' as *;
+@use 'src/styles/utils/mixins' as *;
+
+.progress-bar {
+  height: 30;
+  padding: $padding-s;
+
+  border-radius: $border-radius-m;
+  border: $border-s solid var(--border-gray-50);
+
+  background: var(--hover-blur);
+
+  gap: $gap-s;
+  display: flex;
+
+  @include on-desktop {
+    height: $progress-bar-height;
+  }
+
+  &__progress {
+    border-radius: $border-radius-s;
+    background: linear-gradient(270deg, #d5ba94 0%, #b98756 50%, #534434 100%);
+  }
+
+  &__remainder {
+    flex-grow: 1;
+    border-radius: $border-radius-s;
+    background: var(--gray);
+  }
+}

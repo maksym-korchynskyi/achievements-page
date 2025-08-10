@@ -1,0 +1,38 @@
+@use 'src/styles/utils/vars' as *;
+@use 'src/styles/utils/mixins.scss' as *;
+
+.category-card {
+  flex-grow: 1;
+  padding: $padding-l;
+
+  gap: $gap-l;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+
+  &--active {
+    border-radius: $border-radius-xm;
+    border: $border-m solid var(--gold-lite-50);
+  }
+
+  &__number {
+    @include regular-12-uppercase;
+  }
+
+  &__bottom {
+    gap: $gap-m;
+    display: flex;
+  }
+
+  &__title {
+    flex-grow: 1;
+    color: var(--white);
+
+    @include regular-14;
+  }
+
+  &__total {
+    color: var(--gray);
+    @include regular-14;
+  }
+}

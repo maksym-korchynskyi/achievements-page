@@ -1,0 +1,12 @@
+@use 'src/styles/utils/vars' as *;
+@use 'src/styles/utils/mixins' as *;
+
+.filter {
+  gap: $overview-gap;
+  display: grid;
+
+  @include on-desktop {
+    gap: $overview-gap-tablet;
+    grid-template-columns: 6fr 1fr;
+  }
+}

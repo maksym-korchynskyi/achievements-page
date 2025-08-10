@@ -1,0 +1,80 @@
+@use 'src/styles/utils/vars' as *;
+@use 'src/styles/utils/mixins' as *;
+
+.dropdown {
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+
+  border-radius: $border-radius-m;
+  padding: $padding-xm $padding-l;
+
+  backdrop-filter: blur(30px);
+  background: var(--gray-blur);
+  border: $border-m solid var(--border-dark-60);
+
+  gap: $gap-m;
+  display: flex;
+  align-items: center;
+
+  color: var(--gray-lite);
+
+  @include on-desktop {
+    gap: $gap-s;
+    border-radius: $border-radius-l;
+
+    padding-block: 0;
+    padding-inline: $padding-xl;
+  }
+
+  &__selected-option {
+    flex-grow: 1;
+    @include regular-14-uppercase;
+  }
+
+  &__options {
+    pointer-events: none;
+
+    gap: $gap-m;
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    top: calc(100% + 4px);
+    right: 0;
+    left: 0;
+
+    padding: $padding-xm $padding-l;
+    border-radius: $border-radius-m;
+    border: $border-m solid var(--border-dark-60);
+
+    background: var(--gray);
+    clip-path: inset(0 0 100% 0);
+
+    @include on-desktop {
+      padding-block: $padding-l;
+      padding-inline: $padding-xl;
+    }
+  }
+
+  &--opened &__options {
+    pointer-events: all;
+    cursor: pointer;
+    clip-path: inset(0 0 0 0);
+  }
+
+  &__option {
+    padding: $padding-m;
+    color: var(--dark-blur);
+
+    display: flex;
+    align-items: center;
+    border-radius: $border-radius-m;
+
+    @include regular-14;
+
+    &:hover {
+      background-color: var(--gray-lite);
+    }
+  }
+}

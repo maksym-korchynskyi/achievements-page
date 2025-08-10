@@ -1,0 +1,47 @@
+@use 'src/styles/utils/vars' as *;
+@use 'src/styles/utils/mixins.scss' as *;
+
+.achievements-progress {
+  background: var(--gray-blur);
+  backdrop-filter: blur(30px);
+
+  border: $border-m solid;
+  border-image-source: linear-gradient(
+    180deg,
+    rgba(98, 98, 98, 0.15) 0%,
+    rgba(98, 98, 98, 0) 50%,
+    rgba(98, 98, 98, 0.15) 100%
+  );
+
+  border-radius: $border-radius-l;
+  border-width: 1px;
+
+  padding: $padding-m;
+
+  gap: $gap-m;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+
+  @include on-tablet {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+
+  @include on-desktop {
+    grid-template-columns: 4fr repeat(4, 1fr);
+    grid-template-rows: auto;
+  }
+
+  &__count {
+    grid-column: span 2;
+
+    @include on-tablet {
+      grid-column: span 4;
+    }
+
+    @include on-desktop {
+      grid-column: span 1;
+    }
+  }
+}

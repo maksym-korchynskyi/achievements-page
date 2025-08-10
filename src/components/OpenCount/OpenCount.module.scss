@@ -1,0 +1,24 @@
+@use 'src/styles/utils/vars' as *;
+@use 'src/styles/utils/mixins' as *;
+
+.open-count {
+  padding: $padding-l - 1 $padding-l;
+  border-radius: $border-radius-m;
+  border: $border-s solid var(--border-gray-50);
+
+  backdrop-filter: blur(30px);
+  background: var(--gray-blur);
+
+  gap: $gap-l;
+  display: flex;
+  flex-direction: column;
+
+  &__count {
+    @include regular-24;
+  }
+
+  &__text {
+    color: var(--gray-lite);
+    @include regular-14;
+  }
+}

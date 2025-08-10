@@ -1,0 +1,25 @@
+@use './utils/vars' as *;
+@import url('./utils/_reset.scss');
+
+.page {
+  --white: #ffffff;
+
+  --gray: #535353;
+  --gray-lite: #a7a7a7;
+  --gray-blur: #25252599;
+
+  --gold-lite: #c5a48480;
+  --gold-lite-50: #c5a48480;
+
+  --hover-blur: #45454580;
+
+  --gray-dark-60: #25252599;
+  --border-gray-50: #65656580;
+
+  --dark-blur: #0f0e0c;
+
+  &__body {
+    padding: $body-pad;
+    background: var(--dark-blur);
+  }
+}
