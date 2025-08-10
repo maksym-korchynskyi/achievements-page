@@ -2,7 +2,7 @@
 @use 'src/styles/utils/mixins' as *;
 
 .progress-bar {
-  height: 30;
+  height: $progress-bar-height;
   padding: $padding-s;
 
   border-radius: $border-radius-m;
@@ -14,7 +14,7 @@
   display: flex;
 
   @include on-desktop {
-    height: $progress-bar-height;
+    height: $progress-bar-height-desktop;
   }
 
   &__progress {
