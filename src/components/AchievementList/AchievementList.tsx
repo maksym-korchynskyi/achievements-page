@@ -15,7 +15,6 @@ interface Props {
 export const AchievementList: React.FC<Props> = ({ achievements }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: false,
-    dragFree: true,
     slidesToScroll: 'auto',
   });
 
