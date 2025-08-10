@@ -1,5 +1,5 @@
 @use './utils/vars' as *;
-@import url('./utils/_reset.scss');
+@use './utils/reset';
 
 .page {
   --white: #ffffff;

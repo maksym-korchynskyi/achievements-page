@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
-import Icon from '@/assets/icons/icon-achievement.svg?url';
+import icon from '@/assets/icons/icon-achievement.svg';
 import { museoCyrl } from '@/assets/fonts/fonts';
 
 import { ProgressBar } from '../ProgressBar';
@@ -27,7 +27,7 @@ export const AchievementCount: React.FC<Props> = ({
     <article className={clsx(className, styles['achievements-count'])}>
       <div className={styles['achievements-count__top']}>
         <div className={styles['achievements-count__icon']}>
-          <Image src={Icon} alt="icon" />
+          <Image {...icon} alt="icon" />
         </div>
 
         <div

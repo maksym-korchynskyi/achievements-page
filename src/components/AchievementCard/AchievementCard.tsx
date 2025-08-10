@@ -3,9 +3,9 @@ import React from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
-import info from '@/assets/icons/icon-info.svg?url';
-import lockedAchievement from '@/assets/icons/icon-locked-achievement.svg?url';
-import inProgressAchievement from '@/assets/icons/icon-in-progress-achievement.svg?url';
+import info from '@/assets/icons/icon-info.svg';
+import lockedAchievement from '@/assets/icons/icon-locked-achievement.svg';
+import inProgressAchievement from '@/assets/icons/icon-in-progress-achievement.svg';
 
 import { CardProgress } from '../CardProgress';
 import { Achievement } from '@/types/Achievement';
@@ -32,11 +32,11 @@ export const AchievementCard: React.FC<Props> = ({ achievement }) => {
     >
       <div className={styles['achievement-card__top']}>
         <div className={styles['achievement-card__info-icon']}>
-          <Image src={info} alt="info-icon" />
+          <Image {...info} alt="info-icon" />
         </div>
 
-        {locked && <Image src={lockedAchievement} alt="locked-icon" />}
-        {!locked && <Image src={inProgressAchievement} alt="progress-icon" />}
+        {locked && <Image {...lockedAchievement} alt="locked-icon" />}
+        {!locked && <Image {...inProgressAchievement} alt="progress-icon" />}
       </div>
 
       <div className={styles['achievement-card__divider']} />

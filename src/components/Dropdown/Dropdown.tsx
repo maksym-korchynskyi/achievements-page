@@ -3,7 +3,7 @@
 import clsx from 'clsx';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 
-import arrowDown from '@/assets/icons/icon-arrow-down.svg?url';
+import arrowDown from '@/assets/icons/icon-arrow-down.svg';
 
 import styles from './Dropdown.module.scss';
 import Image from 'next/image';
@@ -75,7 +75,7 @@ export const Dropdown: React.FC<Props> = ({
       <div className={styles['dropdown__selected-option']}>{selected}</div>
 
       <div className={styles['dropdown__arrow']}>
-        <Image src={arrowDown} alt="arrow-down" />
+        <Image {...arrowDown} alt="arrow-down" />
       </div>
 
       <div className={styles.dropdown__options}>
