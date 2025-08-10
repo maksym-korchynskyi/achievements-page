@@ -2,8 +2,9 @@
 @use 'src/styles/utils/mixins' as *;
 
 .progress-bar {
-  height: $progress-bar-height;
   padding: $padding-s;
+  box-sizing: border-box;
+  height: $progress-bar-height;
 
   border-radius: $border-radius-m;
   border: $border-s solid var(--border-gray-50);

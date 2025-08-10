@@ -37,6 +37,7 @@
   &__icon {
     width: 24px;
     aspect-ratio: 1;
+    box-sizing: border-box;
 
     display: flex;
     align-items: center;

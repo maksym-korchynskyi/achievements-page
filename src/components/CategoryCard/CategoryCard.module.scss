@@ -21,7 +21,9 @@
 
   &__bottom {
     gap: $gap-m;
+    flex-grow: 1;
     display: flex;
+    align-items: center;
   }
 
   &__title {

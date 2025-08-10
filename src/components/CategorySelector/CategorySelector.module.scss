@@ -13,8 +13,7 @@ $min-width: 180px;
   gap: $gap-m;
   display: grid;
   overflow-x: auto;
-  grid-auto-flow: column;
-  grid-auto-columns: minmax(180, 1fr);
+  grid-template-columns: repeat(3, minmax($min-width, 1fr));
 
   scrollbar-width: none; // Firefox
   -ms-overflow-style: none; // IE / Edge
