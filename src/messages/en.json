@@ -1,0 +1,97 @@
+{
+  "HomePage": {
+    "AchievementsOverview": {
+      "title": "Achievements",
+      "motivation": "You are better than {percent}% of specialists!",
+      "opened": "Achievements unlocked",
+      "closed": "Achievements locked",
+      "openedWithRank": "Achievements unlocked of rank {rank}"
+    },
+    "RankDropdown": {
+      "all": "All ranks",
+      "only": "Only rank {rank}"
+    }
+  },
+
+  "achievements": {
+    "globalTitle": "All achievements",
+    "c1": {
+      "title": "Platform achievements",
+      "a1": {
+        "title": "Documentalist",
+        "desc": "Added 30 useful documents."
+      },
+      "a2": {
+        "title": "Article author",
+        "desc": "For published blog articles"
+      },
+      "a3": {
+        "title": "Article author",
+        "desc": "For published blog articles"
+      },
+      "a4": {
+        "title": "Article author",
+        "desc": "For published blog articles"
+      },
+      "a5": {
+        "title": "Documentalist",
+        "desc": "Achievement 65 / 100"
+      },
+      "a6": {
+        "title": "Documentalist",
+        "desc": "Achievement 65 / 100"
+      },
+      "a7": {
+        "title": "Documentalist",
+        "desc": "Achievement 12 / 50"
+      },
+      "a8": {
+        "title": "Documentalist",
+        "desc": "Achievement 12 / 50"
+      },
+      "a9": {
+        "title": "Documentalist",
+        "desc": "Achievement 12 / 50"
+      },
+      "a10": {
+        "title": "Documentalist",
+        "desc": "Achievement 2 / 8"
+      },
+      "a11": {
+        "title": "Documentalist",
+        "desc": "Achievement 2 / 8"
+      },
+      "a12": {
+        "title": "Introduction",
+        "desc": "Achievement 0 / 8"
+      }
+    },
+    "c2": {
+      "title": "Specialist achievements",
+      "a1": {
+        "title": "Documentalist",
+        "desc": "Added 30 useful documents."
+      },
+      "a2": {
+        "title": "Article author",
+        "desc": "For published blog articles"
+      },
+      "a3": {
+        "title": "Article author",
+        "desc": "For published blog articles"
+      },
+      "a4": {
+        "title": "Article author",
+        "desc": "For published blog articles"
+      },
+      "a5": {
+        "title": "Documentalist",
+        "desc": "Achievement 65 / 100"
+      },
+      "a6": {
+        "title": "Documentalist",
+        "desc": "Achievement 65 / 100"
+      }
+    }
+  }
+}
