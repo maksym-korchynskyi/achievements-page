@@ -29,7 +29,8 @@ export const CategorySection: React.FC<Props> = ({ category }) => {
   return (
     <section className={styles['category-section']}>
       <h2 className={styles['category-section__title']}>
-        {t(category.titleKey)}
+        {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+        {t(category.titleKey as any)}
 
         <sup className={styles['category-section__count']}>{total}</sup>
       </h2>

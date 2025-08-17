@@ -33,7 +33,8 @@ export const CategoryCard: React.FC<Props> = ({
       </div>
 
       <div className={styles['category-card__bottom']}>
-        <h3 className={styles['category-card__title']}>{t(titleKey)}</h3>
+        {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+        <h3 className={styles['category-card__title']}>{t(titleKey as any)}</h3>
         <div className={styles['category-card__total']}>{total}</div>
       </div>
     </button>

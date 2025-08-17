@@ -47,12 +47,14 @@ export const AchievementCard: React.FC<Props> = ({ achievement }) => {
         })}
       >
         <h3 className={styles['achievement-card__title']}>
-          {t(achievement.titleKey)}
+          {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+          {t(achievement.titleKey as any)}
         </h3>
 
         {completed && (
           <div className={styles['achievement-card__description']}>
-            {t(achievement.descriptionKey)}
+            {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+            {t(achievement.descriptionKey as any)}
           </div>
         )}
 
